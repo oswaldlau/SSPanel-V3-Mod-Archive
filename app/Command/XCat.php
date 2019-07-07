@@ -203,10 +203,10 @@ class XCat
     public function initQQWry()
     {
         echo("downloading....");
-        $copywrite = file_get_contents("https://github.com/esdeathlove/qqwry-download/raw/master/copywrite.rar");
+        $copywrite = file_get_contents("http://update.cz88.net/ip/copywrite.rar");
         $newmd5 = md5($copywrite);
         file_put_contents(BASE_PATH."/storage/qqwry.md5", $newmd5);
-        $qqwry = file_get_contents("https://github.com/esdeathlove/qqwry-download/raw/master/qqwry.rar");
+        $qqwry = file_get_contents("http://update.cz88.net/ip/qqwry.rar");
         if ($qqwry != "") {
             $key = unpack("V6", $copywrite)[6];
             for ($i=0; $i<0x200; $i++) {
